@@ -8,6 +8,7 @@ function getHTTPObject() {
       try { return new ActiveXObject("msxml2.XMLHTTP"); }
         catch (e) {}
       return false;
+    }
   }
   return new XMLHttpRequest();
 }

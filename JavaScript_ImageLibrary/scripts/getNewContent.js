@@ -7,9 +7,9 @@ function getNewContent() {
         var para = document.createElement("p");
         var txt = document.createTextNode(request.responseText);
         para.appendChild(txt);
-        document.getElementById('new').appendChild(para);
+        document.getElementById("new").appendChild(para);
       }
-    };
+    }
     request.send(null);
   } else {
     alert('Sorry, your browser dones\'t support XMLHttpRequest');
