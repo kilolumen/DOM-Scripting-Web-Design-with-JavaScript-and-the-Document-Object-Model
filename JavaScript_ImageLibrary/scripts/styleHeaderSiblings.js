@@ -1,10 +1,10 @@
-function styleHeaderSiblings() {
+function styleHeaderSiblings(tag,theClass) {
   if (!document.getElementsByTagName) return false;
-  var headers = document.getElementsByTagName("h1");
+  var headers = document.getElementsByTagName(tag);
   var elem;
   for (var i=0; i<headers.length; i++) {
     elem = getNextElement(headers[i].nextSibling);
-    addClass(elem,"intro");
+    addClass(elem,theClass);
   }
 }
 function getNextElement(node) {
@@ -16,4 +16,6 @@ function getNextElement(node) {
   }
   return null;
 }
-addLoadEvent(styleHeaderSiblings);
+addLoadEvent(function() {
+  styleHeaderSiblings("h1","intro");
+});
